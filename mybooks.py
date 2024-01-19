@@ -35,6 +35,7 @@ isbn_entry.grid(row=0, column=5, sticky=W)
 add_btn = Button(root, text="Add a Book", bg="white", fg="black", font="helvetica 10 bold", command="")
 add_btn.grid(row=0, column=6, sticky=W)
 
+
 # list box
 list_box = Listbox(root, height=16, width=40, font="helvetica 13", bg="white")
 list_box.grid(row=3, column=1, columnspan=14, sticky=W + E, pady=40, padx=15)

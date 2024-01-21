@@ -5,7 +5,7 @@ from postgres_config import dbConfig
 import psycopg2 as pyo
 
 con = pyo.connect(**dbConfig)
-#print(con)
+
 
 cursor = con.cursor()
 

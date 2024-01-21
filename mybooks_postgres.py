@@ -99,7 +99,7 @@ root = Tk()  # Creates application window
 
 root.title("My Books Database Application") # Adds a title to application window
 root.configure(background="light green")  # Add background color to application window
-root.geometry("850x500")  # Sets a size for application window
+root.geometry("1200x600")  # Sets a size for application window
 root.resizable(width=False,height=False) # Prevents the application window from resizing
 
 # Create Labels and entry widgets
@@ -124,7 +124,7 @@ isbn_entry.grid(row=0, column=5, sticky=W)
 
 # Add a button to insert inputs into database
 
-add_btn = Button(root, text="Add Book",bg="blue",fg="white",font="helvetica 10 bold",command=add_book)
+add_btn = Button(root, text="Add Book",bg="blue",fg="black",font="helvetica 10 bold",command=add_book)
 add_btn.grid(row=0, column=6, sticky=W)
 
 # Add  a listbox  to display data from database
@@ -141,19 +141,19 @@ scroll_bar.configure(command=list_bx.yview)
 
 # Add more Button Widgets
 
-modify_btn = Button(root, text="Modify Record",bg="purple",fg="white",font="helvetica 10 bold",command=update_records)
+modify_btn = Button(root, text="Modify Record",bg="purple",fg="black",font="helvetica 10 bold",command=update_records)
 modify_btn.grid(row=15, column=4)
 
-delete_btn = Button(root, text="Delete Record",bg="red",fg="white",font="helvetica 10 bold",command=delete_records)
+delete_btn = Button(root, text="Delete Record",bg="red",fg="black",font="helvetica 10 bold",command=delete_records)
 delete_btn.grid(row=15, column=5)
 
-view_btn = Button(root, text="View all records",bg="black",fg="white",font="helvetica 10 bold",command=view_records)
+view_btn = Button(root, text="View all records",bg="black",fg="black",font="helvetica 10 bold",command=view_records)
 view_btn.grid(row=15, column=1)#, sticky=tk.N)
 
-clear_btn = Button(root, text="Clear Screen",bg="maroon",fg="white",font="helvetica 10 bold",command=clear_screen)
+clear_btn = Button(root, text="Clear Screen",bg="maroon",fg="black",font="helvetica 10 bold",command=clear_screen)
 clear_btn.grid(row=15, column=2)#, sticky=tk.W)
 
-exit_btn = Button(root, text="Exit  Application",bg="blue",fg="white",font="helvetica 10 bold",command=root.destroy)
+exit_btn = Button(root, text="Exit  Application",bg="blue",fg="black",font="helvetica 10 bold",command=root.destroy)
 exit_btn.grid(row=15, column=3)
 
 

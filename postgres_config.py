@@ -1,6 +1,6 @@
 dbConfig = {
     'user':'postgres',
-    'password':'080201',
+    'password':'123',
     'host':'localhost',
     'database':'booklibrary',
     'port':'5432'

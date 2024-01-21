@@ -5,7 +5,7 @@ from postgres_config import dbConfig
 import psycopg2 as pyo
 
 con = pyo.connect(**dbConfig)
-
+#print(con)
 
 cursor = con.cursor()
 
@@ -26,20 +26,20 @@ class Bookdb:
         return rows
 
     def insert(self,title, author, isbn):
-        sql=("INSERT INTO books(title,author,isbn)VALUES (?,?,?)")
+        sql=("INSERT INTO books(title,author,isbn)VALUES (%s,%s,%s)")
         values =[title,author,isbn]
         self.cursor.execute(sql,values)
         self.con.commit()
         messagebox.showinfo(title="Book Database",message="New book added to database")
 
     def update(self, id, title, author, isbn):
-        tsql = 'UPDATE books SET  title = ?, author = ?, isbn = ? WHERE id=?'
+        tsql = 'UPDATE books SET  title = %s, author = %s, isbn = %s WHERE id=%s'
         self.cursor.execute(tsql, [title,author,isbn,id])
         self.con.commit()
         messagebox.showinfo(title="Book Database",message="Book Updated")
 
     def delete(self, id):
-        delquery ='DELETE FROM books WHERE id = ?'
+        delquery ='DELETE FROM books WHERE id = %s'
         self.cursor.execute(delquery, [id])
         self.con.commit()
         messagebox.showinfo(title="Book Database",message="Book Deleted")
